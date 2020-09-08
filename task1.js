@@ -39,8 +39,16 @@ function task4() {
   paraEl.innerHTML +=
     "<p><strong>Result:</strong> The 1_#name and #name are incorrect</p>";
 }
+
+//Task 5
+function equation() {
+  let expression = 2 + 6 * 8 - 9 + 2 / 3 + 9;
+  let paraEl = ass5.parentElement;
+  paraEl.innerHTML += `<p><strong>Result:</strong> ${Math.floor(expression)}`;
+}
 // Event listners
 ass1.addEventListener("click", () => greet());
 ass2.addEventListener("click", () => countLetters());
 ass3.addEventListener("click", () => removeWhiteSpace());
 ass4.addEventListener("click", () => task4());
+ass5.addEventListener("click", () => equation());
