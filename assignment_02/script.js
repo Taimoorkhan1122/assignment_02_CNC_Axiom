@@ -3,6 +3,7 @@ const stdObj = {
   age: "21",
   city: "Karachi",
 };
+
 //========STORING OBJECTS IN LOCAL STORAGE========
 // /*
 // Local storage can only save strings So in order to save
@@ -10,17 +11,47 @@ const stdObj = {
 // */
 // localStorage.setItem("Student 1", JSON.stringify(stdObj));
 
-// const getItem = localStorage.getItem("Student 1");
-
 // /*
 // Now we have to parse it back from string into object.
 // */
-// console.log(JSON.parse(getItem));
+// const getItem = JSON.parse(localStorage.getItem("Student 1"));
+
+// console.log(getItem);
+// console.log(getItem.name);
+// console.log(getItem.age);
+// console.log(getItem.city);
 
 //========STORING OBJECTS IN SESSION STORAGE========
 
-// Same for session storage convert object into string and then parse it backt to obj
-sessionStorage.setItem("std1", JSON.stringify(stdObj));
+// /*
+// Same for session storage convert object into
+//  string and then parse it backt to obj
+// */
+// sessionStorage.setItem("std1", JSON.stringify(stdObj));
 
-const getItem = sessionStorage.getItem("std1");
-console.log(JSON.parse(getItem));
+// const getItem = JSON.parse(sessionStorage.getItem("std1"));
+// console.log(getItem);
+// console.log(getItem.name);
+// console.log(getItem.age);
+// console.log(getItem.city);
+
+//========HOW TO DO NESTED DESTRUCTRING IN OBJECTS AND REPLACE VALUES========
+
+let nestedObj = {
+  movieName: "Justice League (Snyder Cut)",
+  premierDate: "20 October 2020",
+  TickectsAvailable: 100,
+  pricing: {
+    Gold: 1700,
+    Business: 1000,
+    luxury: 800,
+    standart: 500,
+  },
+};
+
+let {
+  movieName,
+  pricing: { Gold: Silver, luxury: Comfort },
+} = nestedObj;
+
+console.log(movieName, Silver, Comfort);
