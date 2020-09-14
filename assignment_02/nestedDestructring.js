@@ -1,4 +1,4 @@
-//======== Spreading Objects and Changing them ========
+//========HOW TO DO NESTED DESTRUCTRING IN OBJECTS AND REPLACE VALUES========
 
 let nestedObj = {
   movieName: "Justice League (Snyder Cut)",
@@ -7,18 +7,14 @@ let nestedObj = {
   pricing: {
     Gold: 1700,
     Business: 1000,
-    Luxury: 800,
-    Standard: 500,
+    luxury: 800,
+    standart: 500,
   },
 };
 
-let newRates = {
-  ...nestedObj,
-  pricing: {
-    ...nestedObj.pricing,
-    Standard: 600,
-  },
-};
+let {
+  movieName: Movie,
+  pricing: { Gold: Silver, luxury: Comfort }, //Changing Gold to Silver and Luxury to Comfort.
+} = nestedObj;
 
-console.log("Old Price: " + nestedObj.pricing.Standard);
-console.log("New Price: " + newRates.pricing.Standard);
+console.log(Movie, Silver, Comfort);

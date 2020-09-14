@@ -12,7 +12,7 @@ let nestedObj1 = {
   },
 };
 
-let newRates1 = {
+let newRates = {
   ...nestedObj,
   pricing: {
     ...nestedObj.pricing,
@@ -20,5 +20,5 @@ let newRates1 = {
   },
 };
 
-console.log("Old Price: " + nestedObj.pricing.Standard);
+console.log("Old Price: " + nestedObj1.pricing.Standard);
 console.log("New Price: " + newRates.pricing.Standard);
