@@ -37,21 +37,23 @@ const stdObj = {
 
 //========HOW TO DO NESTED DESTRUCTRING IN OBJECTS AND REPLACE VALUES========
 
-let nestedObj = {
-  movieName: "Justice League (Snyder Cut)",
-  premierDate: "20 October 2020",
-  TickectsAvailable: 100,
-  pricing: {
-    Gold: 1700,
-    Business: 1000,
-    luxury: 800,
-    standart: 500,
-  },
-};
+// let nestedObj = {
+//   movieName: "Justice League (Snyder Cut)",
+//   premierDate: "20 October 2020",
+//   TickectsAvailable: 100,
+//   pricing: {
+//     Gold: 1700,
+//     Business: 1000,
+//     luxury: 800,
+//     standart: 500,
+//   },
+// };
 
-let {
-  movieName,
-  pricing: { Gold: Silver, luxury: Comfort },
-} = nestedObj;
+// let {
+//   movieName: Movie,
+//   pricing: { Gold: Silver, luxury: Comfort }, //Changing Gold to Silver and Luxury to Comfort.
+// } = nestedObj;
 
-console.log(movieName, Silver, Comfort);
+// console.log(Movie, Silver, Comfort);
+
+//======== Spreading Objects and Changing them ========
